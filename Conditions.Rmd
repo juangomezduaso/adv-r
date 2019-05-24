@@ -496,7 +496,7 @@ tryCatch(
 )
 
 withCallingHandlers(
-  message = function(c) cat("Caught a message!\n"), 
+  message = function(cnd) cat("Caught a message!\n"), 
   {
     message("Someone there?")
     message("Why, yes!")
@@ -726,6 +726,7 @@ abort_bad_argument <- function(arg, must, not = NULL) {
 }
 ```
 
+\newpage
 ::: base
 
 If you want to throw a custom error without adding a dependency on rlang, you can create a condition object "by hand" and then pass it to `stop()`:
